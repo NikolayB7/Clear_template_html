@@ -59,3 +59,6 @@
 <ol>
 	<li>Long Preprocessor compile: Disable the "safe write" option in PHPStorm settings.</li>
 </ol>
+
+NODE version 14.20.0
+
