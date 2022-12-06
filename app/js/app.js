@@ -28,6 +28,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(function () {
 
+    let progItem = $(".programm__item")
+     
+    progItem.each((i, el) => {
+
+    })
+
+    let count = 0
+    let timer =  
+        setInterval(() => {
+            $(progItem[count]).addClass('active').siblings().removeClass('active')
+            console.log(progItem[count]);
+            count++
+
+            if(count == progItem.length){
+                count = 0
+            }
+
+            if (progItem[count] == undefined) {
+            // count = 0
+
+                // console.log('STOP');
+                // console.log(progItem[count]);
+                clearInterval(timer)
+            }
+        }, 3000)
+    
+       
+    
+    
+
+    
+
+
+
+
     /**Burger*/
 
     var btnBurger = $('.burger-mobile');
@@ -49,7 +84,7 @@ $(function () {
 
 
     /**Mask*/
-    $('input[type="tel"]').inputmask({"mask": "+38(999) 999-99-99", clearMaskOnLostFocus: false});
+    $('input[type="tel"]').inputmask({ "mask": "+38(999) 999-99-99", clearMaskOnLostFocus: false });
 
 
     /** Anchor*/
@@ -69,7 +104,7 @@ $(function () {
         //Высота шапкис учетом отступов если она фиксированая (если нет убрать переменную heightHeader с top )
         var heightHeader = $('.header').outerHeight(true);
         //узнаем высоту от начала страницы до блока на который ссылается якорь
-       var  top = $(id).offset().top - heightHeader; //Если header fixed
+        var top = $(id).offset().top - heightHeader; //Если header fixed
         // var top = $('#' + id).offset().top;
         //анимируем переход на расстояние - top за 1500 мс
         $('body,html').animate({

@@ -1,0 +1,32 @@
+.programm{
+    &__wrap{
+        display: flex;
+        margin: -15px;
+    }
+    &__item{
+        padding: 15px;
+        max-width: 10%;
+         overflow: hidden;
+         transition: all 2s;
+         border-radius: 100%;
+        &.active{
+            max-width: 100%;
+            border-radius: 0;
+            .programm__item-wrap{
+                 
+            }
+        }
+    }
+    &__item-wrap{
+       
+    }
+    &__thumb{
+        height: 240px;
+        width: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &__title{}
+    &__type{}
+}
